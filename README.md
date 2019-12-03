@@ -3,8 +3,8 @@ Códigos para el taller de uso de Supercomputadora manatí para generación de m
 
 ## Pasos
 
-### 1. Configurar espacio de trabajo
-#### Crear la carpeta del proyecto
+### Configurar espacio de trabajo
+#### 1. Crear la carpeta del proyecto
 ```bash
 mkdir taller
 cd taller 
@@ -21,7 +21,7 @@ mkdir 06_dem30mt
 mkdir 07_pbsout
 mkdir 08_export
 ```
-#### Extraer Imagenes landsat
+#### 2. Extraer Imagenes landsat
 ```bash
 cd 01_dataset
 mkdir LC08_L1TP_006063_20181029_20181115_01_T1 & tar xvzf /opt/shared/repositorio/landsat/LC08_L1TP_006063_20181029_20181115_01_T1.tar.gz -C LC08_L1TP_006063_20181029_20181115_01_T1/
@@ -32,35 +32,46 @@ mkdir LC08_L1TP_007063_20170713_20170726_01_T1 & tar xvzf /opt/shared/repositori
 
 mkdir LC08_L1TP_007064_20170713_20170726_01_T1 & tar xvzf /opt/shared/repositorio/landsat/LC08_L1TP_007064_20170713_20170726_01_T1.tar.gz -C LC08_L1TP_007064_20170713_20170726_01_T1/
 ```
-#### Codificando para automatizacion del procesamiento 
+#### 3. Codificando para la automatización del procesamiento 
 Regresar al directorio de taller
 ```bash
 cd ..
 ```
-Crear base datos de las imagenes 
-
+Crear base datos de las imagenes.
+```bash
+cd ..
+```
 Script para leer la base datos y ejecutar el preprocesamiento
-
+```bash
+cd ..
+```
 Script del gestor de colas
-
+```bash
+cd ..
+```
 Script de preprocesamiento
-
+```bash
+cd ..
+```
 Scrip de Procesamiento de mosaico. 
+```bash
+cd ..
+```
 
-#### Ejecucion de preprocesamiento 
+#### 4. Ejecucion de preprocesamiento 
 ```bash
 ./0.scrip_mult_jobs.sh
 ```
-#### Ejecucion de procesamiento
+#### 5. Ejecucion de procesamiento
 ```bash
 qsub 2.qsub_eje_procesamiento_mosaico.sh
 ```
-#### Monitoreo de procesos
+#### 6. Monitoreo de procesos
 ```bash
 qstat
 ```
 
-#### Comandos utiles
+### Comandos útiles
 Para listar contenido
 ```bash
 ls
