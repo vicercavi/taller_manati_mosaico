@@ -290,7 +290,7 @@ if __name__ == '__main__':
                 dir_imagen=dir_import
                 #_masking(dir_imagen,name_file,"IMPORT_")# pasa "ORTO_" o "IMPORT_" si la fuente de la imagen vienen desde la carpeta ortho
                 #_hazerem(dir_imagen,name_file,"IMPORT_")
-                dir_imagen=dir_haze;
+                #dir_imagen=dir_haze;
                 _atcor(dir_imagen,name_file,"IMPORT_") #pasa "ORTO_" o "IMPORT_" si la fuente de la imagen vienen desde la carpeta ortho
 
                 tiempo_total_final = time()
