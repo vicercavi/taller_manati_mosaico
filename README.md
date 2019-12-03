@@ -39,28 +39,32 @@ cd ..
 ```
 Crear base datos de las imagenes.
 ```bash
-cd ..
+cat bd_landsat_loreto.csv 
 ```
 Script para leer la base datos y ejecutar el preprocesamiento
 ```bash
-cd ..
+cat 0.scrip_mult_jobs.sh
 ```
-Script del gestor de colas
+Script del gestor de colas para el preprocesamiento
 ```bash
-cd ..
+cat 1.qsub_eje_pre_procesamiento.sh
 ```
-Script de preprocesamiento
+Script Python de preprocesamiento utilizando PCI-GEOMATICA
 ```bash
-cd ..
+cat 1.scrip_pre_procesamiento_2018.py
 ```
-Scrip de Procesamiento de mosaico. 
+Script del gestor de colas para el procesamiento
 ```bash
-cd ..
+cat 2.qsub_eje_procesamiento_mosaico.sh
+```
+Script Python de procesamiento de mosaico utilizando PCI-GEOMATICA
+```bash
+cat 2.scrip_procesamiento_mosaico_2018.py
 ```
 
-#### 4. Ejecucion de preprocesamiento 
+#### 4. Ejecución de preprocesamiento 
 ```bash
-./0.scrip_mult_jobs.sh
+sh 0.scrip_mult_jobs.sh
 ```
 #### 5. Ejecucion de procesamiento
 ```bash
