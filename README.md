@@ -1,6 +1,16 @@
 # High Performance Computing aplicado a generación de mosaicos
 Códigos para el taller de uso de Supercomputadora manatí para generación de mosaicos
 
+## Requisitos
+### Tener cuenta en a la Supercomputadora Manatí del IIAP. 
+Puede solicitar la cuenta en el siguiente [link](https://docs.google.com/forms/d/e/1FAIpQLSetIRziYnWZbAeiRBg9jeNXnCWJQ0EPYaASL9cFLmL8YFv3SA/viewform)
+
+### Acceder a Supercomputador
+Inicie sesíon con el usuario y contraseña proporcionado
+### Descargar código
+```bash
+git clone git@github.com:vicercavi/taller_manati_mosaico.git
+```
 ## Pasos
 
 ### Configurar espacio de trabajo
