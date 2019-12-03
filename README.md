@@ -78,7 +78,14 @@ cat 2.scrip_procesamiento_mosaico_2018.py
 pwd
 nano 2.scrip_procesamiento_mosaico_2018.py
 ```
-
+Script del gestor de colas para exportar a TIFF
+```bash
+cat 3.qsub_eje_export_mosaico.sh
+```
+Script Python para exportar el mosaico generado utilizando PCI-GEOMATICA. Editar la direccion del proyecto 
+```bash
+cat 3.scrip_fexport.py
+```
 #### 4. Ejecución de preprocesamiento 
 ```bash
 sh 0.scrip_mult_jobs.sh
@@ -87,7 +94,11 @@ sh 0.scrip_mult_jobs.sh
 ```bash
 qsub 2.qsub_eje_procesamiento_mosaico.sh
 ```
-#### 6. Monitoreo de procesos
+#### 6. Exportar a Tiff
+```bash
+qsub 3.qsub_eje_export_mosaico.sh
+```
+#### 7. Monitoreo de procesos
 ```bash
 qstat
 ```

@@ -8,4 +8,4 @@ cd $PBS_O_WORKDIR
 
 ##source $ANACONDA3/bin/activate Python27
 
-python 2.scrip_procesamiento_mosaico_2018.py atcor
+python 2.scrip_procesamiento_mosaico_2018.py atcor | tee log_mosaico.txt
