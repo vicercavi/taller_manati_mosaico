@@ -9,15 +9,14 @@ Puede solicitar la cuenta en el siguiente [link](https://docs.google.com/forms/d
 Inicie sesíon con el usuario y contraseña proporcionado
 ### Descargar código
 ```bash
-git clone git@github.com:vicercavi/taller_manati_mosaico.git
+git clone https://github.com/vicercavi/taller_manati_mosaico.git
 ```
 ## Pasos
 
 ### Configurar espacio de trabajo
 #### 1. Crear la carpeta del proyecto
 ```bash
-mkdir taller
-cd taller 
+cd taller_manati_mosaico/ 
 mkdir 01_dataset
 mkdir 02_import
 mkdir 03_orthoimg
@@ -34,13 +33,17 @@ mkdir 08_export
 #### 2. Extraer Imagenes landsat
 ```bash
 cd 01_dataset
-mkdir LC08_L1TP_006063_20181029_20181115_01_T1 & tar xvzf /opt/shared/repositorio/landsat/LC08_L1TP_006063_20181029_20181115_01_T1.tar.gz -C LC08_L1TP_006063_20181029_20181115_01_T1/
+mkdir LC08_L1TP_006063_20181029_20181115_01_T1
+tar xvzf /opt/shared/repositorio/landsat/LC08_L1TP_006063_20181029_20181115_01_T1.tar.gz -C LC08_L1TP_006063_20181029_20181115_01_T1/
 
-mkdir LC08_L1TP_006064_20180911_20180927_01_T1 & tar xvzf /opt/shared/repositorio/landsat/LC08_L1TP_006064_20180911_20180927_01_T1.tar.gz -C LC08_L1TP_006064_20180911_20180927_01_T1/
+mkdir LC08_L1TP_006064_20180911_20180927_01_T1
+tar xvzf /opt/shared/repositorio/landsat/LC08_L1TP_006064_20180911_20180927_01_T1.tar.gz -C LC08_L1TP_006064_20180911_20180927_01_T1/
 
-mkdir LC08_L1TP_007063_20170713_20170726_01_T1 & tar xvzf /opt/shared/repositorio/landsat/LC08_L1TP_007063_20170713_20170726_01_T1.tar.gz -C LC08_L1TP_007063_20170713_20170726_01_T1/
+mkdir LC08_L1TP_007063_20170713_20170726_01_T1
+tar xvzf /opt/shared/repositorio/landsat/LC08_L1TP_007063_20170713_20170726_01_T1.tar.gz -C LC08_L1TP_007063_20170713_20170726_01_T1/
 
-mkdir LC08_L1TP_007064_20170713_20170726_01_T1 & tar xvzf /opt/shared/repositorio/landsat/LC08_L1TP_007064_20170713_20170726_01_T1.tar.gz -C LC08_L1TP_007064_20170713_20170726_01_T1/
+mkdir LC08_L1TP_007064_20170713_20170726_01_T1
+tar xvzf /opt/shared/repositorio/landsat/LC08_L1TP_007064_20170713_20170726_01_T1.tar.gz -C LC08_L1TP_007064_20170713_20170726_01_T1/
 ```
 #### 3. Codificando para la automatización del procesamiento 
 Regresar al directorio de taller
@@ -59,17 +62,21 @@ Script del gestor de colas para el preprocesamiento
 ```bash
 cat 1.qsub_eje_pre_procesamiento.sh
 ```
-Script Python de preprocesamiento utilizando PCI-GEOMATICA
+Script Python de preprocesamiento utilizando PCI-GEOMATICA. Editar la direccion del proyecto 
 ```bash
 cat 1.scrip_pre_procesamiento_2018.py
+pwd
+nano 1.scrip_pre_procesamiento_2018.py
 ```
 Script del gestor de colas para el procesamiento
 ```bash
 cat 2.qsub_eje_procesamiento_mosaico.sh
 ```
-Script Python de procesamiento de mosaico utilizando PCI-GEOMATICA
+Script Python de procesamiento de mosaico utilizando PCI-GEOMATICA. Editar la direccion del proyecto 
 ```bash
 cat 2.scrip_procesamiento_mosaico_2018.py
+pwd
+nano 2.scrip_procesamiento_mosaico_2018.py
 ```
 
 #### 4. Ejecución de preprocesamiento 
@@ -113,4 +120,8 @@ nano archivo.txt
 ctr+x 
 y
 enter
+``` 
+Para ver la ruta actual
+```bash
+pwd
 ``` 
